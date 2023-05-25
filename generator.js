@@ -11,6 +11,9 @@ const configuration = new Configuration({
 const openai = new OpenAIApi(configuration);
 
 const axios = require("axios");
+
+
+
 const generateQuiz = async (passage, numQuestions) => {
   console.log("PROCESSING..");
   try {
@@ -71,5 +74,6 @@ const generateQuiz = async (passage, numQuestions) => {
     throw error;
   }
 };
+
 
 module.exports = generateQuiz;

@@ -20,5 +20,6 @@ app.listen(port, () => {
 app.post("/message", async (req, res) => {
   const { text, number } = req.body;
   const response = await responseMessage(text);
-  res.send(response);
+
+  res.send(JSON.stringify({ response }));
 });

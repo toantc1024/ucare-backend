@@ -8,12 +8,10 @@ const responseMessage = async (text) => {
   const response = await openai.createCompletion({
     model: "text-davinci-003",
     prompt: `${text}}`,
-    max_tokens: 7,
+    max_tokens: 250,
     temperature: 0,
   });
-  console.log(response);
-
-  return response.data.choices[0].text;
+  return response.data.choices;
 };
 
 module.exports = { responseMessage };
